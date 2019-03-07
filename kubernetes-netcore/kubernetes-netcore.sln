@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28705.295
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml", "yaml", "{34A95CF2-83BE-4F08-B8DE-C7F9A54C5531}"
+	ProjectSection(SolutionItems) = preProject
+		yaml\adminrole.yaml = yaml\adminrole.yaml
+		yaml\adminuser.yaml = yaml\adminuser.yaml
+		yaml\kubernetes-dashboard.yaml = yaml\kubernetes-dashboard.yaml
+		yaml\rook-ceph-cluster.yaml = yaml\rook-ceph-cluster.yaml
+		yaml\rook-ceph-operator.yaml = yaml\rook-ceph-operator.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CDF258A-8B2F-47A7-8A4C-BF335C9B5570}
+	EndGlobalSection
+EndGlobal
