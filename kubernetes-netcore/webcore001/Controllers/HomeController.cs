@@ -29,10 +29,30 @@ namespace webcore001.Controllers
             return new JsonResult(_userRepository.GetUsers());
         }
 
+        [HttpPost("/addval")]
+        public async Task<string> AddVal([FromBody]InData inData)
+        {
+            try
+            {
+                var result = await _userRepository.AddVal(inData.Val);
+                return result.ToString();
+            }
+            catch (Exception exc)
+            {
+                return "";
+            }
+        }
+
+
         [HttpGet("/health")]
         public IActionResult Health()
         {
             return Ok();
+        }
+
+        public class InData
+        {
+            public string Val { get; set; }
         }
     }
 }

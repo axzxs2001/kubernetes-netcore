@@ -18,5 +18,13 @@ namespace webcore001.Respostory
             var db = new NpgsqlConnection(_connectionString);
             return db.Query<User>("select * from users").ToList();
         }
+
+        public async Task<bool> AddVal(string val)
+        {
+            var db = new NpgsqlConnection(_connectionString);
+            var sql = $@"INSERT INTO addtable(val) VALUES(@val)";
+
+            return await db.ExecuteAsync(sql, new { val })>0;
+        }
     }
 }

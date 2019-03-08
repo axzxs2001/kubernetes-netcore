@@ -8,5 +8,6 @@ namespace webcore001.Respostory
     public interface IUserRepository
     {
         List<User> GetUsers();
+        Task<bool> AddVal(string val);
     }
 }
