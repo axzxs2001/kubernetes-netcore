@@ -63,3 +63,23 @@ sudo kubectl taint nodes --all node-role.kubernetes.io/master-
 sudo kubectl apply -f rook-ceph-operator.yaml
 sudo kubectl apply -f rook-ceph-cluster.yaml
 ```
+
+部署rook-ceph dashboard
+```
+sudo kubectl apply -f rook-dashboard-external-https.yaml 
+```
+查看访问dashboard端口
+```
+sudo kubectl -n rook-ceph get service 
+```
+登录
+https://节点主机IP:查询到端口
+获取Rook-ceph帐号密码
+```
+MGR_POD=`kubectl get pod -n rook-ceph | grep mgr | awk '{print $1}'` 
+sudo kubectl -n rook-ceph logs $MGR_POD | grep password 
+```
+
+
+
+
