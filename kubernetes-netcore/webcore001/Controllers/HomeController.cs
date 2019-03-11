@@ -42,11 +42,22 @@ namespace webcore001.Controllers
                 return "";
             }
         }
-
-
+        
+            
         [HttpGet("/health")]
         public IActionResult Health()
         {
+            return Ok();
+        }
+        /// <summary>
+        /// 等待时间
+        /// </summary>
+        /// <param name="second">秒</param>
+        /// <returns></returns>
+        [HttpGet("/waittime")]
+        public IActionResult WaitTime(int second)
+        {
+            System.Threading.Thread.Sleep(second);
             return Ok();
         }
 
@@ -54,5 +65,8 @@ namespace webcore001.Controllers
         {
             public string Val { get; set; }
         }
+
+
+       
     }
 }
