@@ -58,7 +58,7 @@ namespace webcore001.Controllers
         public IActionResult WaitTime(int second)
         {
             System.Threading.Thread.Sleep(second);
-            return Ok();
+            return Ok(Environment.MachineName);
         }
 
         public class InData
