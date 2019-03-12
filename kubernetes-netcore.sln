@@ -5,12 +5,12 @@ VisualStudioVersion = 16.0.28705.295
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml", "yaml", "{34A95CF2-83BE-4F08-B8DE-C7F9A54C5531}"
 	ProjectSection(SolutionItems) = preProject
-		yaml\adminrole.yaml = yaml\adminrole.yaml
-		yaml\adminuser.yaml = yaml\adminuser.yaml
-		yaml\kubernetes-dashboard.yaml = yaml\kubernetes-dashboard.yaml
-		yaml\rook-ceph-cluster.yaml = yaml\rook-ceph-cluster.yaml
-		yaml\rook-ceph-operator.yaml = yaml\rook-ceph-operator.yaml
-		yaml\rook-dashboard-external-https.yaml = yaml\rook-dashboard-external-https.yaml
+		kubernetes-netcore\yaml\adminrole.yaml = kubernetes-netcore\yaml\adminrole.yaml
+		kubernetes-netcore\yaml\adminuser.yaml = kubernetes-netcore\yaml\adminuser.yaml
+		kubernetes-netcore\yaml\kubernetes-dashboard.yaml = kubernetes-netcore\yaml\kubernetes-dashboard.yaml
+		kubernetes-netcore\yaml\rook-ceph-cluster.yaml = kubernetes-netcore\yaml\rook-ceph-cluster.yaml
+		kubernetes-netcore\yaml\rook-ceph-operator.yaml = kubernetes-netcore\yaml\rook-ceph-operator.yaml
+		kubernetes-netcore\yaml\rook-dashboard-external-https.yaml = kubernetes-netcore\yaml\rook-dashboard-external-https.yaml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webcore001", "kubernetes-netcore\webcore001\webcore001.csproj", "{07A4642B-FD9E-4A8D-8D14-368E3E7DADE1}"
