@@ -16,6 +16,10 @@ namespace webcore001.Controllers
         {
             _userRepository = userRepository;
         }
+        /// <summary>
+        /// 基本测试
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -28,7 +32,11 @@ namespace webcore001.Controllers
         {
             return new JsonResult(_userRepository.GetUsers());
         }
-
+        /// <summary>
+        /// 数据库压力测试
+        /// </summary>
+        /// <param name="inData"></param>
+        /// <returns></returns>
         [HttpPost("/addval")]
         public async Task<string> AddVal([FromBody]InData inData)
         {
@@ -43,7 +51,10 @@ namespace webcore001.Controllers
             }
         }
         
-            
+        /// <summary>
+        /// 健康检查
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("/health")]
         public IActionResult Health()
         {
@@ -60,6 +71,12 @@ namespace webcore001.Controllers
             System.Threading.Thread.Sleep(second);
             return Ok(Environment.MachineName);
         }
+
+        /// <summary>
+        /// redis性能测试
+        /// </summary>
+        /// <param name="inData"></param>
+        /// <returns></returns>
         [HttpPost("/addredis")]
         public string AddRedis([FromBody]InData inData)
         {
