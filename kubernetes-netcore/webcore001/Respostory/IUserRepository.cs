@@ -9,5 +9,7 @@ namespace webcore001.Respostory
     {
         List<User> GetUsers();
         Task<bool> AddVal(string val);
+
+        bool AddRedisVal(string val);
     }
 }

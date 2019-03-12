@@ -60,6 +60,19 @@ namespace webcore001.Controllers
             System.Threading.Thread.Sleep(second);
             return Ok(Environment.MachineName);
         }
+        [HttpPost("/addredis")]
+        public string AddRedis([FromBody]InData inData)
+        {
+            try
+            {
+                var result = _userRepository.AddRedisVal(inData.Val);
+                return result.ToString();
+            }
+            catch (Exception exc)
+            {
+                return "";
+            }
+        }
 
         public class InData
         {

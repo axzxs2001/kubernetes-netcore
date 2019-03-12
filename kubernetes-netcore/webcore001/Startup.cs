@@ -28,7 +28,7 @@ namespace webcore001
             //数据连接
             var connectionString = Configuration.GetConnectionString("DefaultConnectionString");
             services.AddSingleton(connectionString);
-            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddSingleton<IUserRepository, UserRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
