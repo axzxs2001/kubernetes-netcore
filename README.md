@@ -51,6 +51,10 @@ sudo kubectl apply -f adminrole.yaml
 ```
 sudo kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
+#### 启动Dashboard代理
+```
+sudo kubectl proxy
+```
 #### 登录
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
 
