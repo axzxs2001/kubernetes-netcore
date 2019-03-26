@@ -24,11 +24,11 @@ sudo kubeadm init --config kubeadm.yaml --ignore-preflight-errors=swap
 ```
 kubeadm join 192.168.252.54:6443 --token jetzdj.7ycrb79mihrlrggq --discovery-token-ca-cert-hash sha256:f8a25957a41d187587a46a0af43c9b715e7e2d903473a9d4e0cad5009a5031ba
 ```
+ 
+```
 mkdir -p $HOME/.kube  
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
-sudo chown $(id -u):$(id -g) $HOME/.kube/config  
-```
-
+sudo chown $(id -u):$(id -g) $HOME/.kube/config 
 ```
 ### 安装网络插件
 ```
