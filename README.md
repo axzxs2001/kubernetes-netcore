@@ -26,6 +26,7 @@ kubeadm join 192.168.252.54:6443 --token jetzdj.7ycrb79mihrlrggq --discovery-tok
 ```
  
 ```
+mv $HOME/.kube $HOME/.kube.bak
 mkdir -p $HOME/.kube  
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
 sudo chown $(id -u):$(id -g) $HOME/.kube/config 
