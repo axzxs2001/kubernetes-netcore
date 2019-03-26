@@ -65,6 +65,7 @@ http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-da
 sudo kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 ### 安装存储集群Rook-Ceph
+首先清空所有节点/var/lib/rook下的遗留文件和文件夹（如果不为空）
 ```
 sudo kubectl apply -f rook-ceph-operator.yaml
 sudo kubectl apply -f rook-ceph-cluster.yaml
