@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webcore001", "kubernetes-ne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webcore001_Test", "kubernetes-netcore\webcore001_Test\webcore001_Test.csproj", "{1AD0A6F7-83CB-424A-9868-3967BD826F72}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ACDB8314-CC0F-447A-A533-051ED6C04F69}"
+	ProjectSection(SolutionItems) = preProject
+		kubernetes-netcore\kubernetes.pptx = kubernetes-netcore\kubernetes.pptx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
