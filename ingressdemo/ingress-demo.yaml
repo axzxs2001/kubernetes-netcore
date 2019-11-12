@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo-ingress
+  annotations:          
+    kubernetes.io/ingress.class: "nginx"
+spec:
+#  tls:
+#  - hosts:
+#    - gsw.demo.com
+#    secretName: demo-secret
+  rules:
+  - host: gsw.demo.com
+    http:
+      paths:
+      - path: /demo01
+        backend:
+          serviceName: demo01-service
+          servicePort: 80
+      #- path: /demo02
+        #backend:
+          #serviceName: demo02-service
+          #servicePort: 81

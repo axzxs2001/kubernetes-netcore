@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingressdemo
+spec:
+  selector:
+    matchLabels:
+      app: ingressdemo
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ingressdemo
+    spec:
+      volumes:
+        - name: appsettings
+          configMap:
+            name: appsettings
+      containers:
+      - name: ingressdemo
+        image: gsw/ingressdemo:v1.0.0
+        imagePullPolicy: IfNotPresent #从本地镜像里拉取
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: appsettings
+            mountPath: /configuration
+            readOnly: true
